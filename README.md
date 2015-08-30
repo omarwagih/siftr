@@ -71,7 +71,7 @@ diff_aa = diffAA(sift_mat)
 
 That's all there is to it!
 
-For further documentation see `?predictFromAlignment`, `?filterPredictions`, '?diffAA' and `?infoContent`
+For further documentation see `?predictFromAlignment`, `?filterPredictions`, `?diffAA` and `?infoContent`
 
 
 ## Contact
