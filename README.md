@@ -46,19 +46,21 @@ sift_mat = predictFromAlignment(sample_fa, cores=1)
 summary(sift_mat)
 ```
 
-The generated matrix contains the sift scores. Each row is a subtituted amino acid and each column is the position in the alignment. 
+The generated matrix contains the sift scores. Each row is the substituted amino acid and each column is the position in the alignment. 
 
 Then, filter the matrix for significant scores (< 0.05), and output in a table format:
 
 ```r
-# Filter predictions for sift score < 0.05 
-filt = filterPredictions(sift_mat)
+# Keep predictions with sift scores < 0.05 
+filt = filterPredictions(sift_mat, score_thresh = 0.05)
 
 # Display resulting table
 print( head(filt) )
 ```
 
 That's all there is to it!
+
+For further documentation see `?predictFromAlignment` and `?filterPredictions`
 
 
 ## Contact
