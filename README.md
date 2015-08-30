@@ -1,4 +1,5 @@
-<img src="https://cdn.rawgit.com/omarwagih/siftr/master/inst/extdata/images/siftr-logo-flat.svg" alt="rmimp logo" width="250px"><br> Predicting the impact of mutations on protein function
+<img src="https://cdn.rawgit.com/omarwagih/siftr/master/inst/extdata/images/siftr-logo-flat.svg" alt="rmimp logo" width="250px"><br>
+<h3>Predicting the impact of mutations on protein function</h3>
 ===============================================================
 
 ## Installation
