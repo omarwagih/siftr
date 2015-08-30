@@ -1,0 +1,10 @@
+Package: siftr
+Type: Package
+Title: generate SIFT scores directly in R
+Version: 1.0.0
+Date: 2015-08-30
+Author: Omar Wagih
+Maintainer: Omar Wagih <wagih@ebi.ac.uk>
+Description: siftr is an R reimplementation of the SIFT algorithim. SIFT predicts whether an amino acid substitution affects protein function. The SIFT prediction is based on the degree of conservation of amino acid residues in sequence alignments.
+License: LGPL
+Imports: data.table, seqinr

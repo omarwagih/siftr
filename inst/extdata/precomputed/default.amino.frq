@@ -1,0 +1,36 @@
+0.0             -- [ 0] gap score = -
+.07681          -- [ 1] Alanine       (Ala, A)
+0.0             -- [21] ambiguity code B = D or N
+.01791          -- [ 5] Cysteine      (Cys, C)
+.05263          -- [ 4] Aspartic acid (Asp, D)
+.06264          -- [ 7] Glutamic acid (Glu, E)
+.03991          -- [14] Phenylalanine (Phe, F)
+.07081          -- [ 8] Glycine       (Gly, G)
+.02251          -- [ 9] Histidine     (His, H)
+.05521          -- [10] Isoleucine    (Ile, I)
+0.0             -- [25] no code J, 0, U
+.05801          -- [12] Lysine        (Lys, K)
+.09191          -- [11] Leucine       (Leu, L)
+.02351          -- [13] Methionine    (Met, M)
+.04434          -- [ 3] Asparagine    (Asn, N)
+0.0             -- [25] no code J, 0, U
+.05041          -- [15] Proline       (Pro, P)
+.04033          -- [ 6] Glutamine     (Gln, Q)
+.05251          -- [ 2] Arginine      (Arg, R)
+.07061          -- [16] Serine        (Ser, S)
+.05831          -- [17] Threonine     (Thr, T)
+0.0             -- [25] no code J, 0, U
+.06531          -- [20] Valine        (Val, V)
+.01311          -- [18] Tryptophan    (Trp, W)
+0.0             -- [23] ambiguity code X = any amino acid
+.03221          -- [19] Tyrosine      (Tyr, Y)
+0.0             -- [22] ambiguity code Z = E or Q
+0.0             -- [24] stop codon translation score = *
+-- Created from SwissProt 27
+
+------------------------------------------------------------------------
+BLIMPS (BLocks IMProved Searcher)
+(C) Copyright 1993, Fred Hutchinson Cancer Research Center
+
+default.amino.frq -- The default amino acid frequency file access.
+ 
