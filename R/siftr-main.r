@@ -173,7 +173,7 @@ summary.siftr_matrix <- function(sift_mat){
 
 #' Generic information content function
 #' 
-#' Not to be exported
+#' @export
 infoContent <- function(x){
   UseMethod("infoContent", x)
 }
@@ -191,7 +191,7 @@ infoContent.siftr_matrix <- function(sift_mat){
 
 #' Generic information content function
 #' 
-#' Not to be exported
+#' @export
 diffAA <- function(x){
   UseMethod("diffAA", x)
 }

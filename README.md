@@ -58,9 +58,20 @@ filt = filterPredictions(sift_mat, score_thresh = 0.05)
 print( head(filt) )
 ```
 
+You can extract further information about the alignment from functions `diffAA` and `infoContent`:
+
+```r
+# Get information content per position for the alignment
+info_content = infoContent(sift_mat)
+
+# Get number of unique amino acids per position
+diff_aa = diffAA(sift_mat)
+```
+
+
 That's all there is to it!
 
-For further documentation see `?predictFromAlignment` and `?filterPredictions`
+For further documentation see `?predictFromAlignment`, `?filterPredictions`, '?diffAA' and `?infoContent`
 
 
 ## Contact

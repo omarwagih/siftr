@@ -7,6 +7,6 @@
 diffAA(x)
 }
 \description{
-Not to be exported
+Generic information content function
 }
 
