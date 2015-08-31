@@ -2,7 +2,8 @@
 % Please edit documentation in R/siftr-main.r
 \name{filterPredictions}
 \alias{filterPredictions}
-\title{Convert siftr matrix to data frame and filter out unreliable predictions}
+\title{Convert siftr matrix to data frame and filter out unreliable predictions.
+For more information on the filtering see \url{http://sift.bii.a-star.edu.sg/www/SIFT_help.html}}
 \usage{
 filterPredictions(sift_mat, score_thresh = 0.05, ic_thresh = 3.25,
   residue_thresh = 2)
@@ -12,7 +13,7 @@ filterPredictions(sift_mat, score_thresh = 0.05, ic_thresh = 3.25,
 
 \item{score_thresh}{sift score threshold, scores above this threshold are removed (default: 0.05)}
 
-\item{ic_thresh}{information content threshold, predictions in positions that have an ic above this threshold are considered low confidence and removed (default: 2.75)}
+\item{ic_thresh}{information content threshold, predictions in positions that have an ic above this threshold are considered low confidence and removed (default: 3.25)}
 
 \item{residue_thresh}{minimum number of aligned residues at the position of prediction (default: 2)}
 }
@@ -20,6 +21,7 @@ filterPredictions(sift_mat, score_thresh = 0.05, ic_thresh = 3.25,
 data frame of predictions
 }
 \description{
-Convert siftr matrix to data frame and filter out unreliable predictions
+Convert siftr matrix to data frame and filter out unreliable predictions.
+For more information on the filtering see \url{http://sift.bii.a-star.edu.sg/www/SIFT_help.html}
 }
 
