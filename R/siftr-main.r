@@ -103,11 +103,12 @@ predictFromAlignment <- function(aln, cores=1){
   sift_mat
 }
 
-#' Convert siftr matrix to data frame and filter out unreliable predictions
+#' Convert siftr matrix to data frame and filter out unreliable predictions. 
+#' For more information on the filtering see \url{http://sift.bii.a-star.edu.sg/www/SIFT_help.html}
 #' 
 #' @param sift_mat siftr matrix generated using predictFromAlignment
 #' @param score_thresh sift score threshold, scores above this threshold are removed (default: 0.05)
-#' @param ic_thresh information content threshold, predictions in positions that have an ic above this threshold are considered low confidence and removed (default: 2.75)
+#' @param ic_thresh information content threshold, predictions in positions that have an ic above this threshold are considered low confidence and removed (default: 3.25)
 #' @param residue_thresh minimum number of aligned residues at the position of prediction (default: 2)
 #' 
 #' @export
