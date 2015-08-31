@@ -3,7 +3,7 @@ if(F){
   require(seqinr)
   require(data.table)
   require(parallel)
-  setwd('~/Development/siftr/')
+  setwd('~/Development/siftr/R')
   source('siftr-helper.R')
 }
 
@@ -107,11 +107,12 @@ predictFromAlignment <- function(aln, cores=1){
 #' 
 #' @param sift_mat siftr matrix generated using predictFromAlignment
 #' @param score_thresh sift score threshold, scores above this threshold are removed (default: 0.05)
+#' @param ic_thresh information content threshold, predictions in positions that have an ic above this threshold are considered low confidence and removed (default: 2.75)
 #' @param residue_thresh minimum number of aligned residues at the position of prediction (default: 2)
 #' 
 #' @export
 #' @return data frame of predictions
-filterPredictions <- function(sift_mat, score_thresh=0.05, residue_thresh=2){
+filterPredictions <- function(sift_mat, score_thresh=0.05, ic_thresh=3.25, residue_thresh=2){
   # Amino acid alphabet
   AA = attr(sift_mat, 'aa')
   
@@ -122,14 +123,16 @@ filterPredictions <- function(sift_mat, score_thresh=0.05, residue_thresh=2){
   n_aas = attr(sift_mat, 'num_aas')
   n_seq = attr(sift_mat, 'nseq')
   query = attr(sift_mat, 'query')
+  median_ic = attr(sift_mat, 'info_content')
   
   dt = data.table(pos=rep(1:npos, each=naa), 
                   ref=rep(query, each=naa), 
                   alt=AA[rep(1:naa, times=npos )], 
                   score=as.double(sift_mat), 
+                  median_ic = rep(median_ic, each=naa),
                   n_aa=rep(n_aas, each=naa),
                   n_seq=n_seq)
-  dt = dt[dt$score <= score_thresh & dt$n_aa >= residue_thresh, ]
+  dt = dt[dt$score <= score_thresh & dt$n_aa >= residue_thresh & dt$median_ic <= ic_thresh, ]
   as.data.frame(dt)
 }
 

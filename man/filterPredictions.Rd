@@ -4,12 +4,15 @@
 \alias{filterPredictions}
 \title{Convert siftr matrix to data frame and filter out unreliable predictions}
 \usage{
-filterPredictions(sift_mat, score_thresh = 0.05, residue_thresh = 2)
+filterPredictions(sift_mat, score_thresh = 0.05, ic_thresh = 3.25,
+  residue_thresh = 2)
 }
 \arguments{
 \item{sift_mat}{siftr matrix generated using predictFromAlignment}
 
 \item{score_thresh}{sift score threshold, scores above this threshold are removed (default: 0.05)}
+
+\item{ic_thresh}{information content threshold, predictions in positions that have an ic above this threshold are considered low confidence and removed (default: 2.75)}
 
 \item{residue_thresh}{minimum number of aligned residues at the position of prediction (default: 2)}
 }
