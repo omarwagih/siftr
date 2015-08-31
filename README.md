@@ -29,7 +29,7 @@ Load the `siftr` package
 library("siftr")
 ```
 
-## Running siftr on sample data:
+## Running siftr on sample data
 
 ```r
 # Get the path to the sample amino acid alignment
@@ -58,7 +58,7 @@ filt = filterPredictions(sift_mat, score_thresh = 0.05)
 print( head(filt) )
 ```
 
-You can extract further information about the alignment from functions `diffAA` and `infoContent`:
+You can extract further information about the alignment from functions `diffAA` and `infoContent`
 
 ```r
 # Get information content per position for the alignment
